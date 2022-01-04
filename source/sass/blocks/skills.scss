@@ -1,0 +1,23 @@
+.skills {
+	list-style: none;
+
+	@media(min-width: $desktop-width) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		column-gap: 20px;
+	}
+}
+
+.skills__item {
+	position: relative;
+
+	&::before {
+		position: absolute;
+		content: "";
+		width: 25px;
+		height: 25px;
+		background: url("/img/icons/mark.svg") no-repeat;
+		top: 4px;
+		left: -30px;
+	}
+}

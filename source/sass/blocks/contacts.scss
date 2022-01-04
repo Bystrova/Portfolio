@@ -1,0 +1,51 @@
+.contacts {
+	list-style: none;
+}
+
+.contacts__item {
+	margin-bottom: 10px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.contacts__link {
+	color: inherit;
+	text-decoration: none;
+	position: relative;
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+	&--phone::before {
+		position: absolute;
+		content: "";
+		width: 27px;
+		height: 27px;
+		background: url("/img/icons/phone.svg") no-repeat;
+		top: 0;
+		left: -33px;
+	}
+
+	&--email::before {
+		position: absolute;
+		content: "";
+		width: 27px;
+		height: 17px;
+		background: url("/img/icons/email.svg") no-repeat;
+		top: 3px;
+		left: -35px;
+	}
+
+	&--telegram::before {
+		position: absolute;
+		content: "";
+		width: 27px;
+		height: 20px;
+		background: url("/img/icons/telegram.svg") no-repeat;
+		top: 3px;
+		left: -35px;
+	}
+}
