@@ -3,6 +3,7 @@ const infoItems = info.querySelectorAll('.info__text');
 const contacts = info.querySelector('.contacts');
 const infoLastItem = infoItems[infoItems.length - 1];
 const TABLETWIDTH = 768;
+const SCROLLVALUE = 500;
 
 const classChangeHandler = (evt) => {
 	let target = evt.target;
@@ -24,4 +25,14 @@ const classChangeHandler = (evt) => {
 	}
 };
 
+const scrollUpHandler = () => {
+	const scrollUpLink = document.querySelector('.scroll-up');
+	if (window.pageYOffset > SCROLLVALUE) {
+		scrollUpLink.classList.add('scroll-up--show');
+	} else {
+		scrollUpLink.classList.remove('scroll-up--show');
+	};
+}
+
 info.addEventListener('click', classChangeHandler);
+window.addEventListener('scroll', scrollUpHandler);
