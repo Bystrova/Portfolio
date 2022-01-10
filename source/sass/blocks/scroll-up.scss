@@ -65,17 +65,19 @@
 				top: 21px;
 				left: 20px;
 			}
+
+			&:hover {
+				background-color: $basic-black;
+			}
+
+			&:hover::before,
+			&:hover::after {
+				background-color: $basic-beige;
+			}
 		}
 	}
 
-	&:hover {
-		background-color: $basic-black;
-	}
 
-	&:hover::before,
-	&:hover::after {
-		background-color: $basic-beige;
-	}
 
 	&--show {
 		display: block;

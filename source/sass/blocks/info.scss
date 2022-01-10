@@ -48,6 +48,7 @@
 	@media(min-width: $tablet-width) {
 		overflow-y: scroll;
 		max-height: 70vh;
+		scrollbar-width: none;
 
 		&::-webkit-scrollbar {
 			width: 0;
