@@ -64,17 +64,24 @@
 	overflow: hidden;
 }
 
-.info__text {
+.info__button {
 	display: block;
+	border: none;
 	border-top: 1px solid $basic-grey;
 	padding: 5px 20px;
 	position: relative;
 	text-transform: uppercase;
 	cursor: pointer;
 	background-color: $basic-beige;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: inherit;
 	font-weight: 700;
+	width: 100%;
+	text-align: left;
 
-	&:hover {
+	&:hover,
+	&:focus {
 		background-color: $basic-black;
 		color: $basic-beige;
 	}
@@ -97,18 +104,19 @@
 		top: 15px;
 	}
 
-	&:hover::before {
+	&:hover::before,
+	&:focus::before {
 		border-top: 1px solid $basic-beige;
 		border-right: 1px solid $basic-beige;
 	}
 }
 
-.info__item:first-child .info__text:hover {
+.info__item:first-child .info__button:hover,
+.info__item:first-child .info__button:focus {
 	border-top: 1px solid $basic-dark-grey;
 }
 
-.info__item:last-child .info__text {
-
+.info__item:last-child .info__button {
 	@media(min-width: $tablet-width) {
 		border-bottom: none;
 	}

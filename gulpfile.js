@@ -76,6 +76,20 @@ const clean = () => {
 
 exports.clean = clean;
 
+//Copy
+
+const copy = (done) => {
+	gulp.src([
+			"source/*.ico",
+		], {
+			base: "source"
+		})
+		.pipe(gulp.dest("build"))
+	done();
+}
+
+exports.copy = copy;
+
 // Server
 
 const server = (done) => {
@@ -112,6 +126,7 @@ const watcher = () => {
 
 const build = gulp.series(
 	clean,
+	copy,
 	optimizeImages,
 	scripts,
 	gulp.parallel(
@@ -126,6 +141,7 @@ exports.build = build;
 
 exports.default = gulp.series(
 	clean,
+	copy,
 	copyImages,
 	scripts,
 	gulp.parallel(
