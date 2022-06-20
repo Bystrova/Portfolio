@@ -22,8 +22,42 @@
 	margin: 10px 0 0 0;
 }
 
-.portfolio__img {
+.portfolio__img-link {
+	width: 300px;
+	height: 150px;
+	overflow: hidden;
 	outline: 3px double $basic-grey;
+	cursor: pointer;
+	position: relative;
+
+	&:hover .portfolio__img {
+		transform: scale(1.02);
+		filter: brightness(70%);
+	}
+
+	&:hover .portfolio__img-text {
+		opacity: 1;
+	}
+}
+
+.portfolio__img {
+	transition: transform 0.5s, filter 0.5s;
+}
+
+.portfolio__img-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0;
+	transition: opacity 0.5s;
+	color: $basic-beige;
+	font-size: 20px;
+	font-weight: bold;
+	text-shadow: 1px 0 1px $basic-black,
+			0 1px 1px $basic-black,
+			-1px 0 1px $basic-black,
+			0 -1px 1px $basic-black;
 }
 
 .portfolio_description {
